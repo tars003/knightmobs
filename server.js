@@ -49,7 +49,7 @@ app.use((req, res, next) => {
 app.use('/session', sessionRoute);
 app.use('/profile', profile);
 app.use('/register', register);
-app.use('/index', index);
+app.use('/', index);
 
 const PORT  = process.env.PORT || 5000;
 
