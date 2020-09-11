@@ -1306,16 +1306,23 @@ color: #FFFFFF;
       <header>
         <nav class="navbar">
           <ul class="Home" style="left: 38%; top: 10%">
-            <li><a href="">Home</a></li>
+            <li><a href="/">Home</a></li>
           </ul>
           <ul class="Schedule" style=" top: 10%">
             <li><a href="">Schedule</a></li>
           </ul>
         </nav>
       </header>
-	  <div class="right"style="left: 80%; top: 38%" >
-		<a href="/profile"  id="sb1">Profile</a>
+    <% if (!user) { %>
+      <div class="right"style="left: 80%; top: 38%" >
+        <a href="/profile"  id="sb1">Profile</a>
       </div>
+    <%} else { %>
+      <div class="right"style="left: 80%; top: 38%" >
+        <a href="/session/login"  id="sb1">Login</a>
+      </div>
+    <% } %>
+	  
     </div>
 
     <div id="myNav" class="overlay">
