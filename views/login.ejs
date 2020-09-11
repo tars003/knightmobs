@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KnightMobs</title>
+    <link rel="stylesheet" type="text/css" href="/styles/login.css" />
+    <link rel="icon" type="image/ico" href="/images/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bar">
+      <div class="left">
+        <img src="/images/Group 15.png" alt="" />
+      </div>
+
+      <header>
+        <nav class="navbar">
+          <ul class="Home">
+            <li><a href="/index">Home</a></li>
+          </ul>
+          <ul class="Schedule">
+            <li><a href="">Schedule</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <div class="overlay-content">
+        <a href="#vision">Vision</a>
+        <a href="#vision">Mission</a>
+        <a href="#vt">Values</a>
+        <a href="#us">About Us</a>
+        <a href="#contactus">Contact Us</a>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="bar1" onclick="myFunction(this); openNav();"></div>
+      <div class="bar2" onclick="myFunction(this); openNav();"></div>
+      <div class="bar3" onclick="myFunction(this); openNav();"></div>
+    </div>
+
+    <div class="esports1">
+      <img src="/images/logo.png" />
+    </div>
+
+    <div>
+      <h3>Login</h3>
+    </div>
+
+    <img src="/images/Rectangle 6.png" class="line1" />
+
+    <form class="login" action="" method="POST">
+      <div class="box1">
+        <input
+          type="text"
+          id="f2"
+          class="mail"
+          required="required"
+          name="email"
+        />
+        <label for="mail" class="label1">E-Mail</label>
+      </div>
+
+      <div class="box2">
+        <input
+          type="Password"
+          id="f4"
+          class="pass"
+          required="required"
+          name="pass"
+        />
+        <label for="pass" class="label2">Password</label>
+      </div>
+      <input type="submit" name="pay" id="sb1" value="Login" />
+    </form>
+
+    <img src="/images/Vector 4.png" class="Vector" />
+    <img src="/images/Rectangle 15.png" class="btm" />
+
+    <input type="text" class="query" required="required" />
+    <label for="cn" class="label3">your contact number</label>
+    <input type="text" class="query1" required="required" />
+    <label for="help" class="label4">How can we help ?</label>
+    <input type="submit" value="submit" class="submit" />
+
+    <div class="ofc">
+      <p>Registered Office :</p>
+    </div>
+    <div class="addr">
+      <p>
+        14, Shiv BHAWAN, MOHANPURA, Jodhpur Rajasthan 342001 (+91)9999999999
+      </p>
+    </div>
+
+    <div class="ctus">
+      <p>Contact Us :</p>
+    </div>
+    <div class="ctn">
+      <p>theknightmobsesports@gmail.com &nbsp; www.theKnightmobs.com</p>
+    </div>
+
+    <div class="social">
+      <p id="sh">Our Social Handles</p>
+      <br />
+      <img src="/images/Group 12.png" class="Group12" />
+    </div>
+
+    <img src="/images/Rectangle 18.png" class="line" />
+    <img src="/images/copyright.png" class="copy" />
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+    </script>
+
+    <script type="text/javascript">
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+    </script>
+  </body>
+</html>
