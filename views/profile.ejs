@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>KnightMobs</title>
-    <link rel="stylesheet" type="text/css" href="/styles/profile.css" />
-    <link rel="icon" type="image/ico" href="/images/logo.png" />
+    <link rel="stylesheet" type="text/css" href="styles/profile.css" />
+    <link rel="icon" type="image/ico" href="images/logo.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
@@ -12,7 +12,7 @@
   <body>
     <div class="bar">
       <div class="left">
-        <img src="/images/Group 15.png" alt="" />
+        <img src="images/Group 15.png" alt="" />
       </div>
 
       <header>
@@ -21,17 +21,14 @@
             <li><a href="/">Home</a></li>
           </ul>
           <ul class="Schedule">
-            <li><a href="">Schedule</a></li>
+            <li><a href="/schedule">Schedule</a></li>
           </ul>
         </nav>
       </header>
-      <div class="right">
-		<a href="/session/logout" id="sb1">Logout</a>
-	  </div>
-	  <!-- <div class="right"style="left: 65%;" >
-		<a href="/profile"  id="sb1">Profile</a>
-      </div> -->
     </div>
+
+    <button type="submit" value="logout" style="top: 30px;" class="right logout-btn" 
+    onclick="window.location.href = window.location.origin + '/session/logout'">logout</button>
 
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
@@ -43,18 +40,16 @@
         <a href="#vt">Values</a>
         <a href="#us">About Us</a>
         <a href="#contactus">Contact Us</a>
-        <a href="login.html">Login</a>
+        <a href="/session/login">Login</a>
       </div>
     </div>
-    <div class="container">
+    <div class="container" style="top: 30px;">
       <div class="bar1" onclick="myFunction(this); openNav();"></div>
       <div class="bar2" onclick="myFunction(this); openNav();"></div>
       <div class="bar3" onclick="myFunction(this); openNav();"></div>
     </div>
 
-    <h6 class="heading">
-       You Have Successfully Registered for the tournament
-    </h6>
+    <h6 class="heading">You Have Successfully Registered for the tournament</h6>
     <img src="/images/Rectangle 6.png" class="underline" />
 
     <select class="tournament">
@@ -73,83 +68,148 @@
 
     <h6 class="teamid">Team ID :</h6>
     <div id="box">
-      <input type="text" id="f1" class="inp"   disabled />
+      <input type="text" id="f1" class="inp" disabled />
       <label for="Full Name" class="label">A1000011</label>
       <img src="/images/Rectangle 82.png" class="idbtm" />
     </div>
 
-	<form action="/profile/update" method="POST">
-		<h6 class="igl">In Game Leader :</h6>
-		<div class="box2">
-		<input type="text" id="f2" class="phn" value="<%=user.contactNumber%>" name="contactNumber"  />
-		<label for="phn" class="label1"  >Phone no.</label>
-		<img src="Rectangle 81.png" class="phbtm" />
-		</div>
+    <form action="/profile/update" method="POST">
+      <h6 class="igl">In Game Leader :</h6>
+      <div class="box2">
+        <input
+          type="text"
+          id="f2"
+          class="phn"
+          value="<%=user.contactNumber%>"
+          name="contactNumber"
+        />
+        <label for="phn" class="label1">Phone no.</label>
+        <img src="Rectangle 81.png" class="phbtm" />
+      </div>
 
-		<div class="box3">
-		<input type="text" id="f3" class="name" value="<%=user.name%>" name="name"   />
-		<label for="ign" class="label2">In Game Name</label>
-		<img src="Rectangle 81.png" class="nbtm" />
-		</div>
+      <div class="box3">
+        <input
+          type="text"
+          id="f3"
+          class="name"
+          value="<%=user.name%>"
+          name="name"
+        />
+        <label for="ign" class="label2">In Game Name</label>
+        <img src="Rectangle 81.png" class="nbtm" />
+      </div>
 
-		<div class="box4">
-		<input type="text" id="f4" class="chid" name="player1id" value="<%=user.player1id%>"   />
-		<label for="chid" class="label3">Character Id</label>
-		<img src="Rectangle 81.png" class="ibtm" />
-		</div>
+      <div class="box4">
+        <input
+          type="text"
+          id="f4"
+          class="chid"
+          name="player1id"
+          value="<%=user.player1id%>"
+        />
+        <label for="chid" class="label3">Character Id</label>
+        <img src="Rectangle 81.png" class="ibtm" />
+      </div>
 
-		<h6 class="pl2">Player 2 :</h6>
-		<div class="box5">
-		<input type="text" id="f5" class="pl2inp" name="player2name" value="<%=user.player2name%>"   />
-		<label for="chid" class="label4">In Game Name</label>
-		<img src="Rectangle 81.png" class="pl2btm" />
-		</div>
-		<div class="box6">
-		<input type="text" id="f6" class="chid2" name="player2id" value="<%=user.player2id%>"   />
-		<label for="chid" class="label5">Character Id</label>
-		<img src="Rectangle 81.png" class="chid2btm" />
-		</div>
+      <h6 class="pl2">Player 2 :</h6>
+      <div class="box5">
+        <input
+          type="text"
+          id="f5"
+          class="pl2inp"
+          name="player2name"
+          value="<%=user.player2name%>"
+        />
+        <label for="chid" class="label4">In Game Name</label>
+        <img src="Rectangle 81.png" class="pl2btm" />
+      </div>
+      <div class="box6">
+        <input
+          type="text"
+          id="f6"
+          class="chid2"
+          name="player2id"
+          value="<%=user.player2id%>"
+        />
+        <label for="chid" class="label5">Character Id</label>
+        <img src="Rectangle 81.png" class="chid2btm" />
+      </div>
 
-		<h6 class="pl3">Player 3 :</h6>
-		<div class="box7">
-		<input type="text" id="f6" class="pl3inp" name="player3name" value="<%=user.player3name%>"  />
-		<label for="chid" class="label6">In Game Name</label>
-		<img src="Rectangle 81.png" class="pl3btm" />
-		</div>
-		<div class="box8">
-		<input type="text" id="f6" class="chid3" name="player3id" value="<%=user.player3id%>"   />
-		<label for="chid" class="label7">Character Id</label>
-		<img src="Rectangle 81.png" class="chid3btm" />
-		</div>
+      <h6 class="pl3">Player 3 :</h6>
+      <div class="box7">
+        <input
+          type="text"
+          id="f6"
+          class="pl3inp"
+          name="player3name"
+          value="<%=user.player3name%>"
+        />
+        <label for="chid" class="label6">In Game Name</label>
+        <img src="Rectangle 81.png" class="pl3btm" />
+      </div>
+      <div class="box8">
+        <input
+          type="text"
+          id="f6"
+          class="chid3"
+          name="player3id"
+          value="<%=user.player3id%>"
+        />
+        <label for="chid" class="label7">Character Id</label>
+        <img src="Rectangle 81.png" class="chid3btm" />
+      </div>
 
-		<h6 class="pl4">Player 4 :</h6>
-		<div class="box9">
-		<input type="text" id="f8" class="pl4inp" name="player4name" value="<%=user.player4name%>"  />
-		<label for="chid" class="label8">In Game Name</label>
-		<img src="Rectangle 81.png" class="pl4btm" />
-		</div>
-		<div class="box10">
-		<input type="text" id="f9" class="chid4" name="player4id" value="<%=user.player4id%>"   />
-		<label for="chid" class="label9">Character Id</label>
-		<img src="Rectangle 81.png" class="chid4btm" />
-		</div>
+      <h6 class="pl4">Player 4 :</h6>
+      <div class="box9">
+        <input
+          type="text"
+          id="f8"
+          class="pl4inp"
+          name="player4name"
+          value="<%=user.player4name%>"
+        />
+        <label for="chid" class="label8">In Game Name</label>
+        <img src="Rectangle 81.png" class="pl4btm" />
+      </div>
+      <div class="box10">
+        <input
+          type="text"
+          id="f9"
+          class="chid4"
+          name="player4id"
+          value="<%=user.player4id%>"
+        />
+        <label for="chid" class="label9">Character Id</label>
+        <img src="Rectangle 81.png" class="chid4btm" />
+      </div>
 
-		<h6 class="sbplayer">Substitute Player :</h6>
-		<div class="box11">
-		<input type="text" id="f8" class="sbinp" name="player5name"  value="<%=user.player5name%>" />
-		<label for="chid" class="label10">In Game Name</label>
-		<img src="Rectangle 81.png" class="sbbtm" />
-		</div>
-		<div class="box12">
-		<input type="text" id="f9" class="chid5" name="player5id" value="<%=user.player5id%>"   />
-		<label for="chid" class="label11">Character Id</label>
-		<img src="Rectangle 81.png" class="chid5btm" />
-		</div>
+      <h6 class="sbplayer">Substitute Player :</h6>
+      <div class="box11">
+        <input
+          type="text"
+          id="f8"
+          class="sbinp"
+          name="player5name"
+          value="<%=user.player5name%>"
+        />
+        <label for="chid" class="label10">In Game Name</label>
+        <img src="Rectangle 81.png" class="sbbtm" />
+      </div>
+      <div class="box12">
+        <input
+          type="text"
+          id="f9"
+          class="chid5"
+          name="player5id"
+          value="<%=user.player5id%>"
+        />
+        <label for="chid" class="label11">Character Id</label>
+        <img src="Rectangle 81.png" class="chid5btm" />
+      </div>
 
-		<input type="submit" value="save" class="save" />
-		<!-- <input type="submit" value="Make Payment" class="mkpay" /> -->
-
-	</form>
+      <input type="submit" value="save" class="save" />
+      <!-- <input type="submit" value="Make Payment" class="mkpay" /> -->
+    </form>
 
     <img src="images/Vector 4.png" class="Vector" />
     <img src="images/Rectangle 15.png" class="btm" />
@@ -157,7 +217,6 @@
     <input type="text" class="query" placeholder="your contact number" />
     <input type="text" class="query1" placeholder="How can we help ? " />
     <input type="submit" value="submit" class="submit" />
-
 
     <div class="ofc">
       <p>Registered Office :</p>
@@ -188,7 +247,6 @@
       function openNav() {
         document.getElementById("myNav").style.width = "100%";
       }
-
       function closeNav() {
         document.getElementById("myNav").style.width = "0%";
       }

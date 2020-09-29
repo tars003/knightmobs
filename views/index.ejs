@@ -7,6 +7,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="/styles/profile.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/schedule.css" />
     <link rel="icon" type="image/ico" href="images/logo.png" />
     <!-- <link rel="stylesheet" type="text/css" href="Hamburger.css"> -->
     <style type="text/css">
@@ -1298,31 +1299,22 @@ color: #FFFFFF;
     </style>
   </head>
   <body>
+
     <div class="bar">
       <div class="left">
-        <img src="/images/Group 15.png" alt="" />
+        <img src="images/Group 15.png" alt="" />
       </div>
 
       <header>
         <nav class="navbar">
-          <ul class="Home" style="left: 38%; top: 10%">
-            <li><a href="/">Home</a></li>
+          <ul style="top: 10%; padding: 0%;" class="Home">
+            <li ><a href="/"  class="active">Home</a></li>
           </ul>
-          <ul class="Schedule" style=" top: 10%">
-            <li><a href="">Schedule</a></li>
+          <ul style="top: 10%; padding: 0%;" class="Schedule">
+            <li><a href="/schedule">Schedule</a></li>
           </ul>
         </nav>
       </header>
-    <% if (!user) { %>
-      <div class="right"style="left: 80%; top: 38%" >
-        <a href="/profile"  id="sb1">Profile</a>
-      </div>
-    <%} else { %>
-      <div class="right"style="left: 80%; top: 38%" >
-        <a href="/session/login"  id="sb1">Login</a>
-      </div>
-    <% } %>
-	  
     </div>
 
     <div id="myNav" class="overlay">

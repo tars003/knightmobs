@@ -17,6 +17,19 @@ router.get('/', async(req, res) => {
     }
 });
 
+router.get('/schedule', async(req, res) => {
+    if(req.session.user) {
+        console.log(req.session.user);
+        const user = await User.findById(req.session.user.userId);
+        const payload = {
+            user: user
+        }
+        res.render('schedule', payload);
+    } else {
+        res.render('schedule');
+    }
+});
+
 router.post('/', (req, res) => {
     console.log('index POST triggered !!');
     console.log(req.body);
